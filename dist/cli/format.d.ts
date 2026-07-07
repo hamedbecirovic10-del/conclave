@@ -1,0 +1,11 @@
+import type { RoomAgent, StoredMessage } from "../protocol/types.js";
+export declare const dim: (s: string) => string;
+export declare const bold: (s: string) => string;
+export declare const red: (s: string) => string;
+export declare const green: (s: string) => string;
+export declare const yellow: (s: string) => string;
+export declare const blue: (s: string) => string;
+export declare const magenta: (s: string) => string;
+export declare const cyan: (s: string) => string;
+export declare function formatMessage(message: StoredMessage): string;
+export declare function formatAgent(agent: RoomAgent): string;

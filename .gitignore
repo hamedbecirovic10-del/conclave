@@ -1,5 +1,6 @@
+# dist/ is committed on purpose: `npm install -g github:...` must work
+# without running any build scripts on the user's machine.
 node_modules/
-dist/
 *.db
 *.db-wal
 *.db-shm
