@@ -30,16 +30,18 @@ Works on **macOS, Linux and Windows**. Requires **Node ≥ 24** (uses the built-
 
 ## Install
 
-```bash
-npm install -g github:hamedbecirovic10-del/conclave
-```
-
-or from a clone:
+The repo ships prebuilt (`dist/`), so installing runs **zero build steps and zero scripts**:
 
 ```bash
 git clone https://github.com/hamedbecirovic10-del/conclave.git
-cd conclave && npm install && npm run build && npm link
+cd conclave
+npm install --omit=dev   # 3 small runtime deps, no compilation
+npm link                 # makes the `conclave` command available everywhere
 ```
+
+`npm install -g github:hamedbecirovic10-del/conclave` also works on most npm setups
+(some npm versions gate git-dependency preparation behind script approval — if the
+command above misbehaves, use the clone + link route).
 
 ## Set up a project (once)
 
