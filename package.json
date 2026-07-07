@@ -1,0 +1,61 @@
+{
+  "name": "conclave",
+  "version": "0.1.0",
+  "description": "Local real-time communication layer for coding agents working on the same repository",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamedbecirovic10-del/conclave.git"
+  },
+  "homepage": "https://github.com/hamedbecirovic10-del/conclave#readme",
+  "bugs": "https://github.com/hamedbecirovic10-del/conclave/issues",
+  "keywords": [
+    "agents",
+    "claude-code",
+    "codex",
+    "multi-agent",
+    "coordination",
+    "websocket",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=23.4.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "conclave": "./dist/cli/index.js"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./sdk": "./dist/sdk/index.js",
+    "./protocol": "./dist/protocol/index.js",
+    "./server": "./dist/server/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "tsc -p tsconfig.build.json",
+    "dev": "tsx src/cli/index.ts",
+    "serve": "tsx src/cli/index.ts serve",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "ws": "^8.18.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.5.13",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
